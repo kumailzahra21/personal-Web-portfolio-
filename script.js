@@ -223,3 +223,9 @@ window.addEventListener("load", () => {
         document.body.style.opacity = "1";
     }, 200);
 });
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    navbar.classList.toggle('active');
+};

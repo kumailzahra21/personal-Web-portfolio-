@@ -204,7 +204,7 @@ section {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, .1);
     transition: .4s;
-    color:#00f0ff;
+    color: #00f0ff;
     animation: bubbleDrop 10s infinite ease in;
 }
 
@@ -374,3 +374,323 @@ textarea:focus {
         display: flex;
     }
 }
+
+/*=================RESPONSIVE BREAKPOINTS=================*/
+@media (max-width:992px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg);
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+}
+
+.navbar {
+    transition: 0.4s ease;
+}
+
+.navbar {
+    transition: 0.4s ease;
+}
+/* ================= REVIEW SECTION ================= */
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    transition: .4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--primary);
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: var(--primary);
+}
+
+/* Glow Border Animation */
+
+.review-card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(45deg, var(--primary), var(--accent), transparent);
+    top: -50%;
+    left: -50%;
+    animation: rotate 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Tablet */
+@media (max-width:992px) {
+    .review-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width:768px) {
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+}
+/* ================= REVIEW TOP ================= */
+
+.review-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-top img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.client-role {
+    display: block;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+/* ================= STARS ================= */
+
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px gold;
+}
+/* ================= REVIEW SECTION ================= */
+
+.review {
+    padding: 80px 10%;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ================= REVIEW CARD ================= */
+
+.review-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= TOP SECTION ================= */
+
+.review-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-top img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00f7ff;
+}
+
+.review-top h4 {
+    font-size: 18px;
+}
+
+.client-role {
+    font-size: 13px;
+    color: #00f7ff;
+}
+
+/* ================= STARS ================= */
+
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ================= TEXT ================= */
+
+.review-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+/* ================= REVIEW SECTION ================= */
+
+.review {
+    padding: 80px 10%;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ================= REVIEW CARD ================= */
+
+.review-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= TOP SECTION ================= */
+
+.review-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-top img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00f7ff;
+}
+
+.review-top h4 {
+    font-size: 18px;
+}
+
+.client-role {
+    font-size: 13px;
+    color: #00f7ff;
+}
+
+/* ================= STARS ================= */
+
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ================= TEXT ================= */
+
+.review-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .review {
+        padding: 60px 5%;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+    .review-top img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+}
+
